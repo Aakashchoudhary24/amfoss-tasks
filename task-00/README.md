@@ -1,0 +1,1 @@
+I already had Ubuntu installed(dual booted alongside windows 10) since I saw my classmates in amFOSS using it.
