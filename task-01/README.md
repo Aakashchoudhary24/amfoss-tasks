@@ -1,0 +1,1 @@
+This task was fairly easy as I have learned typing (touch typing) already and don't have the habit of looking at the keyboard.
