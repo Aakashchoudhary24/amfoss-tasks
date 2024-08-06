@@ -1,4 +1,4 @@
-# **About Me**
+# **About Me** -
   Hi, I am Aakash Choudhary. I would consider myself a passionate learner and an outgoing person. My hobbies lie on a diverse spectrum and I constantly
   like to approach new topics of interest. Working with people and tech and solving the most minute to big problems is what drives me.
 # Why should you choose me ?
