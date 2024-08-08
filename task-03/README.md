@@ -1,5 +1,3 @@
-# Time taken to complete the task - 1 da
-
 # My approach - 
 ## Seeing the various languages and assuming their programs might vary a lot I broke down the task into parts
    1) Pick a language at a time
