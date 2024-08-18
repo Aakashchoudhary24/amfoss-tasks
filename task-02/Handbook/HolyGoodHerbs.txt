@@ -1,9 +1,0 @@
-Moonbloom- from amfoss-tasks/task-02/Terminal-Chaos/Arrakis-dex/Eolian Caves/Entrance3/01/01L/01/02/Steep slope/Cliff/Cliff-Edge/Moonbloom/Moonbloom.txt
-
-Mistveil - from amfoss-tasks/task-02/Terminal-Chaos/Arrakis-dex/Eolian Caves/Entrance3/01/01L/01/02/01/02/glowing herbs/MistveilHerb/Mistveil.txt
-
-Moonbloom - from amfoss-tasks/task-02/Terminal-Chaos/Arrakis-dex/Eolian Caves/Entrance4/More Vegetation/More Vegetation/Vegetation/Moonbloom.txt
-
-using MoonbloomMistveil - Applying the algorithm - obtained LnnmknnlLhrsdhk
-
-used the command - grep -r -E "holy|good"  ~/amfoss-tasks/task-02/Terminal-Chaos/Arrakis-dex/
