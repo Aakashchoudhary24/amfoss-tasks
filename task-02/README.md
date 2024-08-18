@@ -15,7 +15,12 @@
 
   # Journey - 
   ## Part I :
-     
+     1) Used the tree command to list out the entire directory tree and files within
+     2) Found the medallion.py file with the find command
+     3) Running medallion.py enabled the read options for the parchment.txt file
+     4) Found Statue of Marika.txt file
+     5) Found engrave.txt and Voidgate.sh using tree and find commands
+     6) Entered the code for the Voidgate.sh file and proceeded to Part II
   ## Part II :
      1) Used the command : grep -r "holy\|good"  ~/amfoss-tasks/task-02/Terminal-Chaos/Arrakis-dex/
      2) Found Moonbloom and Mistveil as the only files containing both "holy" and "good"
