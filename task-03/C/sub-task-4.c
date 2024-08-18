@@ -1,9 +1,13 @@
 #include <stdio.h>
 #include <stdlib.h>
 
+int main() {
+    showDiamond();
+    return 0;
+}
 void asteriskDiamond(int n, FILE *output) {   
     if (n <= 0) {
-        fprintf(stderr, "Please enter a natural number\n");
+        printf("Please enter a natural number\n");
         return;
     }
     
@@ -52,14 +56,12 @@ void asteriskDiamond(int n, FILE *output) {
 }
 
 void showDiamond() {
-    FILE *input = fopen("/home/aakash/amfoss-tasks/task-03/C/diamondIn.txt", "r");
-    FILE *output = fopen("/home/aakash/amfoss-tasks/task-03/C/diamondOut.txt", "w");
-
+    FILE *input = fopen("/home/aakash/amfoss-tasks/task-03/C/Input.txt", "r");
     if (input == NULL) {
         perror("Error opening input file");
         return;
     }
-
+    FILE *output = fopen("/home/aakash/amfoss-tasks/task-03/C/Output.txt", "w");
     if (output == NULL) {
         perror("Error opening output file");
         fclose(input);
@@ -73,9 +75,4 @@ void showDiamond() {
 
     fclose(input);
     fclose(output);
-}
-
-int main() {
-    showDiamond();
-    return 0;
 }

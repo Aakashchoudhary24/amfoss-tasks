@@ -10,7 +10,6 @@ void asteriskDiamond() {
         printf("Please enter a natural number\n");
         return;
     }
-
     if (n % 2 == 0) {
         for (int i = 0; i < n; i++) {
             for (int j = 0; j < n - i - 1; j++) {
@@ -54,7 +53,6 @@ void asteriskDiamond() {
         }
     }
 }
-
 int main() {
     asteriskDiamond();
     return 0;
