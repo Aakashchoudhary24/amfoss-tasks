@@ -1,26 +1,26 @@
-  # Commands I used throughout this task :-
-  1) mkdir
-  2) cd
-  3) ls
-  4) cat 
-  5) cp
-  6) tree
-  7) find
-  8) rm
-  9) touch
-  10) git branch -r
-  11) git checkout <branch>
-  12) git status, git add ., git commit -m "Commit Message"
-  13) nano ~/.bashrc, source ~/.bashrc - nothing much, just for changing my username@hostname to Im/BATMAN ^-^
+  # Commands I used throughout this task :
+   1) mkdir
+     2) cd
+     3) ls
+     4) cat 
+     5) cp   
+     6) tree
+     7) find
+     8) rm
+     9) touch
+     10) git branch -r
+     11) git checkout <branch>
+     12) git status, git add ., git commit -m "Commit Message"
+     14) grep
 
   # Journey - 
   ## Part I :
-     1) Used the tree command to list out the entire directory tree and files within
+   1) Used the tree command to list out the entire directory tree and files within
      2) Found the medallion.py file with the find command
      3) Running medallion.py enabled the read options for the parchment.txt file
      4) Found Statue of Marika.txt file
      5) Found engrave.txt and Voidgate.sh using tree and find commands
-     6) Entered the code for the Voidgate.sh file and proceeded to Part II
+     6) Entered the code for the Voidgate.sh file i.e. : aHR0cHM6Ly9naXRo and proceeded to Part II
   ## Part II :
      1) Used the command : grep -r "holy\|good"  ~/amfoss-tasks/task-02/Terminal-Chaos/Arrakis-dex/
      2) Found Moonbloom and Mistveil as the only files containing both "holy" and "good"
@@ -34,7 +34,7 @@
      7) Moved further to The-Dark-Realm-I
   
   ## Part III :
-     1) Used the tree command in The-Dark-Realm-I's Arrakis-dex
+   1) Used the tree command in The-Dark-Realm-I's Arrakis-dex
      2) Found a file named chest1.py
      3) Ran the file, which then asked for a code
      4) Used the code of the Celestial Veil Amulet found in The-Light-Realm i.e. : CSigVmaroAn
@@ -53,4 +53,7 @@
 
   ## Part V : 
      1) Reached God-Suite
-     2) 
+     2) Read through the commits
+     3) Tried decoding the last given code : aHR0cHM6Ly9naXRodWIuY29tL2FuZ3JlemljaGF0dGVyYm94L1RvLXRoZS1zdGFycy1hbmQtcmVhbG1zLXVuc2Vlbg==
+     4) Obtained the link to the new repository : https://github.com/angrezichatterbox/To-the-stars-and-realms-unseen
+     5) Cloned the repo and ran the victory.py file to obtain the winning token.
