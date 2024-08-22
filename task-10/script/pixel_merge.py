@@ -33,6 +33,6 @@ def pixel_merge(folder_path):
             
         previous_coordinates = (x_coordinate, y_coordinate)  
          
-    output_image.save('/home/aakash/amfoss-tasks/task-10/Operation-Pixel-Merge/output/secret.png')
+    output_image.save('/home/aakash/amfoss-tasks/task-10/output/secret.png')
     
 pixel_merge('../assets/')
