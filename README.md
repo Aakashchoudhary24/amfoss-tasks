@@ -24,57 +24,57 @@
   </thead>
   <tbody>
     <tr>
-      <td>Task-00</td>
+      <td><a href="https://github.com/Aakashchoudhary24/amfoss-tasks/tree/main/task-00">Task-00</tda>
       <td>Install Linux</td>
       <td>Completed</td>
     </tr>
     <tr>
-      <td>Task-01</td>
+      <td><a href="https://github.com/Aakashchoudhary24/amfoss-tasks/tree/main/task-01">Task-01</tda>
       <td>Type Maestro</td>
       <td>Completed</td>
     </tr>
     <tr>
-      <td>Task-02</td>
+      <td><a href="https://github.com/Aakashchoudhary24/amfoss-tasks/tree/main/task-02">Task-02</tda>
       <td>Terminal Chaos</td>
       <td>Completed</td>
     </tr>
     <tr>
-      <td>Task-03</td>
+      <td><a href="https://github.com/Aakashchoudhary24/amfoss-tasks/tree/main/task-03">Task-03</tda>
       <td>Hello, World!</td>
       <td>Completed</td>
     </tr>
     <tr>
-      <td>Task-04</td>
+      <td><a href="https://github.com/Aakashchoudhary24/amfoss-tasks/tree/main/task-04">Task-04</tda>
       <td>Gopal and his PagePal</td>
-      <td>Not Attempted</td>
+      <td></td>
     </tr>
     <tr>
-      <td>Task-05</td>
+      <td><a href="https://github.com/Aakashchoudhary24/amfoss-tasks/tree/main/task-05">Task-05</tda>
       <td>TerminalTrolly</td>
       <td></td>
     </tr>
     <tr>
-      <td>Task-06</td>
+      <td><a href="https://github.com/Aakashchoudhary24/amfoss-tasks/tree/main/task-06">Task-06</tda>
       <td>OpenDocs</td>
       <td></td>
     </tr>
     <tr>
-      <td>Task-07</td>
+      <td><a href="https://github.com/Aakashchoudhary24/amfoss-tasks/tree/main/task-07">Task-07</tda>
       <td>Pirate's Dilemma</td>
       <td></td>
     </tr>
     <tr>
-      <td>Task-08</td>
+      <td><a href="https://github.com/Aakashchoudhary24/amfoss-tasks/tree/main/task-08">Task-08</tda>
       <td>Blog Burst</td>
       <td></td>
     </tr>
     <tr>
-      <td>Task-09</td>
+      <td><a href="https://github.com/Aakashchoudhary24/amfoss-tasks/tree/main/task-09">Task-09</tda>
       <td>HERO-DEX!</td>
       <td></td>
     </tr>
     <tr>
-      <td>Task-10</td>
+      <td><a href="https://github.com/Aakashchoudhary24/amfoss-tasks/tree/main/task-10">Task-10</tda>
       <td>Operation Pixel Merge</td>
       <td>Completed</td>
     </tr>
