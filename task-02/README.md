@@ -1,17 +1,21 @@
   # Commands I used throughout this task :
-   1) mkdir
+     1) mkdir
      2) cd
      3) ls
-     4) cat 
-     5) cp   
-     6) tree
-     7) find
-     8) rm
-     9) touch
-     10) git branch -r
-     11) git checkout <branch>
-     12) git status, git add ., git commit -m "Commit Message"
-     14) grep
+     4) pwd 
+     5) cat 
+     6) cp   
+     7) tree
+     8) find
+     9) rm
+     10) touch
+     11) git branch -r
+     12) git checkout <branch>
+     13) git status, git add ., git commit -m "Commit Message"
+     14) grep 
+     15) code <fileName> or <filePath> (eg. code README.md, prevents the hassle of moving the cursor each time to open a file)
+     16) mv <intialFilePath> <finalFilePath>
+     17) nano <fileName> - ctrl + X, y.
 
   # Journey - 
   ## Part I :
