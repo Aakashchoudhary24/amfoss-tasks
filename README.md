@@ -46,7 +46,7 @@
     <tr>
       <td><a href="https://github.com/Aakashchoudhary24/amfoss-tasks/tree/main/task-04">Task-04</tda>
       <td>Gopal and his PagePal</td>
-      <td></td>
+      <td>Completed</td>
     </tr>
     <tr>
       <td><a href="https://github.com/Aakashchoudhary24/amfoss-tasks/tree/main/task-05">Task-05</tda>
