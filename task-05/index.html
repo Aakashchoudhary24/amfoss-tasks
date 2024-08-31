@@ -3,26 +3,34 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>E-commerce Terminal</title>
+    <title>Butter Store</title>
     <link rel="stylesheet" href="styles.css">
+
 </head>
 <body>
     <div class="container">
 
         <div class="product-catalog">
-            <nav class="navbar">
 
+            <nav class="navbar">
+                <label class="logo">ButterStore</label>
             </nav>
+            
+            <div class="showroom">
+                <div class="filters"></div>
+                <div class="products"></div>
+            </div>
+            
         </div>
 
         <div class="terminal">
             <div class="terminal-window">
                 <div class="terminal-input">
-                    <span id="user@ubuntu" class="prompt"><strong>user@fakestore: $</strong></span>
-                    <input type="text" id="command" placeholder="Enter a command or type 'help'">
+                    <span id="user@ubuntu" class="prompt"><strong>butter@counter:$</strong></span>
+                    <input type="text" id="command" placeholder="Type 'help'">
                 </div>
                 <div class="terminal-output">
-                    <p class="terminal-out"></p>
+                    <p id="terminal-out"></p>
                 </div>
             </div>
         </div>

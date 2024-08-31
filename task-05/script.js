@@ -1,6 +1,7 @@
-//fix the errors and complete the code.
+fetch('https://fakestoreapi.com/products').then(res=>res.json()).then(json=>console.log(json))
 
-const terminalOutput = document.getElementById('.terminal-out');
+
+const terminalOutput = document.querySelector('.terminal-output');
 const terminalInput = document.querySelector('input[type="text"]');
 
 
@@ -22,7 +23,7 @@ function handleInput(command) {
 }
 
 function viewCommand() {
-    terminalOutput.innerHTML = "Available Commands:"
+    terminalOutput.innerHTML += "Available Commands:"
 
 }
 

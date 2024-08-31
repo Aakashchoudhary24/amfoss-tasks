@@ -1,45 +1,64 @@
+body {
+    margin-top: 10px;
+}
 .container {
     display: flex;
-    height: 100vh;
+    height: 97vh;
 }
 .product-catalog {
     width: 60%;
     border: none;
     padding-right: 10px;
+    display: flex;
+    flex-direction: column;
 }
 .navbar {
-    width: 100%;
-    height: 80px;
-    background-color: rgb(253, 253, 90);
+    width: 59.2vw;
+    height: 8vh;
+    background-color: black;
+    border-radius: 10px;
+    position: relative;
+    top: 0px;
+}
+.showroom {
+    background-color: #2e2e2e;
+    height: 90vh;
+    width: 59.2vw;
+    position: relative;
+    top: 10px;
     border-radius: 10px;
 }
 .terminal {
-    width: 40%;
+    width: 39vw;
+    left: 0vw;
     background-color: black;
     color: #fff;
     padding: 16px;
     box-sizing: border-box;
-    border-radius: 5px;
-    height: auto;
+    border-radius: 10px;
+    height: 98vh;
+    position: relative;
+    overflow: hidden;
 }
 .terminal-window {
     background-color: #2e2e2e;
     height: 98%;
-    padding: 10px;
     overflow: hidden;
     border-radius: 5px;
+    padding: 10px;
 }
 .terminal-input {
     display: flex;
-    margin-bottom: 5px;
 }
 .prompt {
     margin-right: 5px;
-    color: rgb(253, 253, 53);
+    color: white;
     font-weight: 100;
     font-size: 20px;
-    letter-spacing: 2px;
     font: 'Trebuchet MS';
+}
+.prompt:active {
+    background-color: #2e2e2e;
 }
 #command {
     font-size: 20px;
@@ -58,4 +77,100 @@ input[type="text"] {
     color: #fff;
     outline: none;
     flex-grow: 1;
+    width: auto;
+}
+@media screen and (max-width: 430px) {
+    .container {
+        flex-direction: column;
+        margin: 0;
+        padding: 0;
+    }
+    .navbar {
+        width: 96vw;
+        height: 10%;
+    }
+    .showroom{
+        width: 96vw;
+        height: 50%;
+        margin-top: 100px;
+    }
+    .terminal {
+        width: 96vw;
+        height: 30%;
+        position: relative;
+        margin-top: 10px;
+    }
+}
+@media screen and (max-width: 890px) {
+    .container {
+        flex-direction: column;
+        margin: 0;
+        padding: 0;
+        justify-content: center;
+        align-content: center;
+    }
+    .navbar {
+        width: 98vw;
+        height: 10vh;
+        position: relative;
+        top: 0px;
+    }
+    .showroom{
+        width: 98vw;
+        height: 60vh;
+        position: relative;
+        top: 5px;
+    }
+    .terminal {
+        width: 98vw;
+        height: 28vh;
+        position: relative;
+        top: 10px;
+    }
+    .terminal-window{
+        height: 90%;
+    }
+    .prompt {
+        font-size: 20px;
+    }
+}
+@media screen and (max-width: 430px) {
+    .container {
+        flex-direction: column;
+        margin: 0;
+        padding: 0; 
+    }
+    .navbar {
+        width: 96vw;
+        height: 10vh;
+        position: relative;
+        margin-top: 0px;
+    }
+    .showroom{
+        width: 96vw;
+        height: 56vh;
+        position: relative;
+        margin-top: 1px;
+    }
+    .terminal {
+        width: 96vw;
+        height: 34vh;
+        position: relative;
+        margin-top: 1px;
+    }
+    .terminal-window{
+        height: 90%;
+    }
+}
+/*Responsive navbar*/
+/*
+LIMITS:
+device from 890 to max
+device from smallest to 430
+*/
+label.logo {
+    color: #fff;
+    font-size: 30px;
+    padding: 0 0 0 30px;
+    line-height: 70px;
 }
