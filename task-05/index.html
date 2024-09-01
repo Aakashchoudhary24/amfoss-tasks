@@ -5,36 +5,38 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Butter Store</title>
     <link rel="stylesheet" href="styles.css">
-
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Sofia">
 </head>
 <body>
     <div class="container">
-
-        <div class="product-catalog">
-
-            <nav class="navbar">
-                <label class="logo">ButterStore</label>
-            </nav>
-            
+        <nav>
+            <label class="logo">ButterStore</label>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Products</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+        <div class="mall">
+            <div class="terminal">
+                <div class="terminal-window">
+                    <div class="terminal-input">
+                        <span id="counter" ><strong>butter@counter:$</strong></span>
+                        <input type="text" id="command" placeholder="Type 'help'">
+                    </div>
+                    <div class="terminal-output">
+                        <p id="terminal-out"></p>
+                    </div>
+                </div>
+                    
+            </div>
             <div class="showroom">
                 <div class="filters"></div>
                 <div class="products"></div>
             </div>
             
         </div>
-
-        <div class="terminal">
-            <div class="terminal-window">
-                <div class="terminal-input">
-                    <span id="user@ubuntu" class="prompt"><strong>butter@counter:$</strong></span>
-                    <input type="text" id="command" placeholder="Type 'help'">
-                </div>
-                <div class="terminal-output">
-                    <p id="terminal-out"></p>
-                </div>
-            </div>
-        </div>
-
     </div>
     <script src="script.js"></script>
 </body>

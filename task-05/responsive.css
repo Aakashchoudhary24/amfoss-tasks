@@ -1,0 +1,89 @@
+@media screen and (max-width: 430px) {
+    .container {
+        flex-direction: column;
+        margin: 0;
+        padding: 0;
+    }
+    .navbar {
+        width: 96vw;
+        height: 10%;
+    }
+    .showroom{
+        width: 96vw;
+        height: 50%;
+        margin-top: 100px;
+    }
+    .terminal {
+        width: 96vw;
+        height: 30%;
+        position: relative;
+        margin-top: 10px;
+    }
+}
+@media screen and (max-width: 890px) {
+    .container {
+        flex-direction: column;
+        margin: 0;
+        padding: 0;
+        justify-content: center;
+        align-content: center;
+    }
+    .navbar {
+        width: 98vw;
+        height: 10vh;
+        position: relative;
+        top: 0px;
+    }
+    .showroom{
+        width: 98vw;
+        height: 60vh;
+        position: relative;
+        top: 5px;
+    }
+    .terminal {
+        width: 98vw;
+        height: 28vh;
+        position: relative;
+        top: 10px;
+    }
+    .terminal-window{
+        height: 90%;
+    }
+    .prompt {
+        font-size: 20px;
+    }
+}
+@media screen and (max-width: 430px) {
+    .container {
+        flex-direction: column;
+        margin: 0;
+        padding: 0; 
+    }
+    .navbar {
+        width: 96vw;
+        height: 10vh;
+        position: relative;
+        margin-top: 0px;
+    }
+    .showroom{
+        width: 96vw;
+        height: 56vh;
+        position: relative;
+        margin-top: 1px;
+    }
+    .terminal {
+        width: 96vw;
+        height: 34vh;
+        position: relative;
+        margin-top: 1px;
+    }
+    .terminal-window{
+        height: 90%;
+    }
+}
+/*Responsive navbar*/
+/*
+LIMITS:
+device from 890 to max
+device from smallest to 430
+*/
