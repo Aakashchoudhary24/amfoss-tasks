@@ -41,7 +41,7 @@
     <tr>
       <td><a href="https://github.com/Aakashchoudhary24/amfoss-tasks/tree/main/task-03">Task-03</tda>
       <td>Hello, World!</td>
-      <td>Completed</td>
+      <td>Partially Completed</td>
     </tr>
     <tr>
       <td><a href="https://github.com/Aakashchoudhary24/amfoss-tasks/tree/main/task-04">Task-04</tda>
@@ -51,7 +51,7 @@
     <tr>
       <td><a href="https://github.com/Aakashchoudhary24/amfoss-tasks/tree/main/task-05">Task-05</tda>
       <td>TerminalTrolly</td>
-      <td></td>
+      <td>Partially Completed</td>
     </tr>
     <tr>
       <td><a href="https://github.com/Aakashchoudhary24/amfoss-tasks/tree/main/task-06">Task-06</tda>
@@ -71,7 +71,7 @@
     <tr>
       <td><a href="https://github.com/Aakashchoudhary24/amfoss-tasks/tree/main/task-09">Task-09</tda>
       <td>HERO-DEX!</td>
-      <td></td>
+      <td>Unattempted</td>
     </tr>
     <tr>
       <td><a href="https://github.com/Aakashchoudhary24/amfoss-tasks/tree/main/task-10">Task-10</tda>
