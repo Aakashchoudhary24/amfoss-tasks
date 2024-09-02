@@ -35,7 +35,7 @@
     </tr>
     <tr>
       <td><a href="https://github.com/Aakashchoudhary24/amfoss-tasks/tree/main/task-02">Task-02</tda>
-      <td>Terminal Chaos</td>
+      <td><a href="https://github.com/amansxcalibur/Terminal-Chaos">Terminal Chaos</td>
       <td>Completed</td>
     </tr>
     <tr>
@@ -45,12 +45,12 @@
     </tr>
     <tr>
       <td><a href="https://github.com/Aakashchoudhary24/amfoss-tasks/tree/main/task-04">Task-04</tda>
-      <td>Gopal and his PagePal</td>
+      <td><a href="https://github.com/shraavv/PagePal-Telegram-bot-phase2">Gopal and his PagePal</td>
       <td>Completed</td>
     </tr>
     <tr>
       <td><a href="https://github.com/Aakashchoudhary24/amfoss-tasks/tree/main/task-05">Task-05</tda>
-      <td>TerminalTrolly</td>
+      <td><a href="https://github.com/swayam-agrahari/TerminalTrolly">TerminalTrolly</td>
       <td>Partially Completed</td>
     </tr>
     <tr>
@@ -60,7 +60,7 @@
     </tr>
     <tr>
       <td><a href="https://github.com/Aakashchoudhary24/amfoss-tasks/tree/main/task-07">Task-07</tda>
-      <td>Pirate's Dilemma</td>
+      <td><a href="https://github.com/hrideshmg/Pirates-Dilemma">Pirate's Dilemma</td>
       <td></td>
     </tr>
     <tr>
@@ -70,12 +70,12 @@
     </tr>
     <tr>
       <td><a href="https://github.com/Aakashchoudhary24/amfoss-tasks/tree/main/task-09">Task-09</tda>
-      <td>HERO-DEX!</td>
+      <td><a href="https://github.com/chimnayajith/hero-dex-phase2//">HERO-DEX!</td>
       <td>Unattempted</td>
     </tr>
     <tr>
       <td><a href="https://github.com/Aakashchoudhary24/amfoss-tasks/tree/main/task-10">Task-10</tda>
-      <td>Operation Pixel Merge</td>
+      <td><a href="https://github.com/hrideshmg/Operation-Pixel-Merge">Operation Pixel Merge</td>
       <td>Completed</td>
     </tr>
   </tbody>
