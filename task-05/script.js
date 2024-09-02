@@ -3,10 +3,22 @@ const terminalInput = document.querySelector('input[type="text"]');
 const terminal = document.querySelector('.terminal');
 const terminalWindow = document.getElementById('terminal-window');
 
+const helpMessage = `Available Commands:
+list
+details 'product_id'
+add 'product_id'
+remove 'product_id'
+clear
+cart
+buy
+search 'product_name'
+sort 'price/name'`
+
+// handling the inputs
 function handleInput(command, outputElement) {
     switch (command) {
         case 'help':
-            outputElement.innerHTML += "Available Commands:list,details 'product_id',add 'product_id',remove 'product_id',clear,cart,buy,search 'product_name',sort 'price/name'";
+            outputElement.innerHTML += helpMessage;
             break;
         case 'clear':
             clear();
@@ -18,6 +30,8 @@ function handleInput(command, outputElement) {
     terminalInput.value = '';
 }
 
+
+// after every enter key press 
 function insertTerminalWindow() {
     const newInputLine = document.createElement('div');
     newInputLine.className = 'terminal-input';
@@ -50,6 +64,7 @@ function insertTerminalWindow() {
     });
 }
 
+// even listener for enter key press
 terminalInput.addEventListener('keydown', function(event) {
     if (event.key === 'Enter') {
         const command = terminalInput.value.trim();
@@ -57,6 +72,8 @@ terminalInput.addEventListener('keydown', function(event) {
         insertTerminalWindow();
     }
 });
+
+// clear function
 function clear(){
     terminal.innerHTML = '';
 
@@ -95,4 +112,29 @@ function clear(){
     newInput.focus();
 
     terminalWindow.innerHTML = '';
+}
+
+// rendering the product data
+let product = null;
+fetch('https://fakestoreapi.com/products/')
+.then(response => response.json())
+.then(data => {
+    product= data;
+    console.log(product);
+    addDataToHTML();
+})
+
+const showroom = document.querySelector('.showroom');
+
+function addDataToHTML(){
+    product.forEach(product => {
+        const newProduct = document.createElement('img');
+        newProduct.src = product.image;
+
+        const productCard = document.createElement('div')
+        productCard.className = 'product-card';
+
+        productCard.appendChild(newProduct);
+        showroom.appendChild(productCard);
+    })
 }
