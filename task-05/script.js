@@ -12,7 +12,7 @@ fetch('https://fakestoreapi.com/products/')
     console.log(product);
     renderImages();
 })
-// // rendering the product images in showroom
+// rendering the product images in showroom
 function renderImages(){
     product.forEach(product => {
         const showroom = document.querySelector('.showroom');
@@ -74,7 +74,7 @@ function handleInput(command, terminalOutput) {
     switch (cmd) {
 
         case 'help':
-            helpCommand();
+            helpCommand(terminalOutput);
             break;
 
         case 'clear':
@@ -94,7 +94,7 @@ function handleInput(command, terminalOutput) {
             break;
 
         case 'cart':
-            viewCartContent();
+            viewCartContent(terminalOutput);
             break;
 
         case 'add':
@@ -144,17 +144,9 @@ function handleInput(command, terminalOutput) {
     terminalInput.value = '';
 }
 // help command
-function helpCommand(){
-    terminalOutput.textContent = 
-    `1) list
-2) clear
-3) details id
-4) cart
-5) buy
-6) sort "price/name"
-7) add "product_id"
-8) remove "product_id"
-9) search "product_name"`
+function helpCommand(terminalOutput){
+    terminalOutput.innerHTML = 
+    `1) list <br>2) clear<br>3) details "product_id"<br>4) cart<br>5) buy<br>6) sort "price/name"<br>7) add product_id<br>8) remove "product_id"<br>9) search "product_id"`
 }
 // clear command
 function clearTerminal(){
@@ -212,49 +204,54 @@ function viewProductDetails(terminalOutput, productId){
                 <p>Description : ${productDetail.description}</p>
                 <p>Category : ${productDetail.category}</p>`;
 }
-// essential function
-function locateProductInCart(cart, value){
-    const totalItems = cart.length;
-    for(i = 0; i < totalItems; i++){
-        if (cart[i] == value){
-            return i;
-        }
-        else {
-            return false;
-        }
-    }
-}
 // add to cart
 function addToCart(terminalOutput, productId){
 
-    const productToAdd = product.find(p => p.id === parseInt(productId));
-    const thisId = productToAdd.id
-    if(!productToAdd){
-        terminalOutput.textContent += "No product with provided ID found\n"
+    if(productId > 20){
+        terminalOutput.textContent += "Please provide a valid ID\n"
     }
-    else if (locateProductInCart(cart, thisId)){
+    else if (cart.includes(productId)){
         terminalOutput.textContent += "Item already in cart"
     }
     else{
-        cart.push(thisId);
+        cart.push(productId);
         terminalOutput.innerHTML += 
-        `Product ${thisId} successfully added to cart . Type 'cart' to view cart details`;
+        `Product ${productId} successfully added to cart . Type 'cart' to view cart details`;
     }
 }
 // remove from cart
 function removeFromCart(terminalOutput, productId){
+    const indexOfProduct = cart.indexOf(productId);
 
-    productIndexInCart = locateProductInCart(cart, productId);
-
-    const individualProduct = product.find(p => p.id === parseInt(productId));
     if (productId > 20){
         terminalOutput.textContent += "No product with provided ID\n"
     }
-    else if (!individualProduct){
-        terminalOutput.textContent += "Product not in cart... yet :)"
-    }
     else{
-        cart.pop(productIndexInCart);
+        cart.splice(indexOfProduct, 1);
         terminalOutput.textContent += `Product ${productId} removed successfully`;
     }
+}
+// view current cart status
+function viewCartContent(terminalOutput) {
+
+    var netPrice = 0;
+    if(cart.length == 0){
+        terminalOutput.textContent = "No items in the cart yet :("
+    }
+    else if (cart.length > 0){
+        for(i = 0; i < cart.length; i++){
+            const individualProduct = product.find(p => p.id === parseInt(cart[i]));
+            netPrice += individualProduct.price;
+            terminalOutput.innerHTML += `<strong>Product :${individualProduct.id}</strong><br>
+            Title : ${individualProduct.title}<br>
+            Price : ${individualProduct.price}<br>
+            ---------------------------------------<br>\n`
+        }
+        terminalOutput.innerHTML += `Total payable amount : $ ${netPrice}<br>
+        Type buy to proceed to checkout`
+    }
+}
+// sort on basis of price 
+function sortProducts(terminalOutput, minAmount, maxAmount, name){
+
 }
