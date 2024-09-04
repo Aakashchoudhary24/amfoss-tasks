@@ -3,6 +3,7 @@ const terminalInput = document.querySelector('input[type="text"]');
 const terminal = document.querySelector('.terminal');
 const terminalWindow = document.getElementById('terminal-window');
 const cart = [];
+const totalCartValue = document.createElement('div');
 // rendering product data
 let product = null;
 fetch('https://fakestoreapi.com/products/')
@@ -20,10 +21,24 @@ function renderImages(){
         const newProduct = document.createElement('img');
         newProduct.src = product.image;
 
-        const productCard = document.createElement('div')
+        const productCard = document.createElement('div');
         productCard.className = 'product-card';
 
+        const productGist = document.createElement('div');
+        productGist.className = 'product-gist';
+
+        const addToCartButton = document.createElement('button');
+        addToCartButton.className = 'cart-button';
+        addToCartButton.textContent = ' + '
+
+        const productPrice = document.createElement('p');
+        productPrice.className = 'product-price';
+        productPrice.textContent = `$${product.price}`;
+
         productCard.appendChild(newProduct);
+        productGist.appendChild(productPrice);
+        productGist.appendChild(addToCartButton);
+        productCard.appendChild(productGist)
         showroom.appendChild(productCard);
     })
 }
@@ -125,16 +140,16 @@ function handleInput(command, terminalOutput) {
             break;
 
         case 'sort':
-            if (arg) {
-                sortCommand(terminalOutput, arg);
-            }
-            else {
-                terminalOutput.textContent += "Please provide a product ID.\n"
+            if (arg === 'name' || arg === 'price') {
+                sortAndDisplayProducts(arg);
+                terminalOutput.textContent += `Products sorted in order by ${arg}.\n`;
+            } else {
+                terminalOutput.textContent += "Please specify 'name' or 'price' for sorting.\n";
             }
             break;
 
         case 'buy':
-            buyCommand();
+            proceedToBuy();
             break;
 
         default:
@@ -146,7 +161,7 @@ function handleInput(command, terminalOutput) {
 // help command
 function helpCommand(terminalOutput){
     terminalOutput.innerHTML = 
-    `1) list <br>2) clear<br>3) details "product_id"<br>4) cart<br>5) buy<br>6) sort "price/name"<br>7) add product_id<br>8) remove "product_id"<br>9) search "product_id"`
+    `<strong>Available Commands :</strong><br>1) list <br>2) clear<br>3) details "product_id"<br>4) cart<br>5) buy<br>6) sort "price/name"<br>7) add "product_id"<br>8) remove "product_id"<br>9) search "product_id"`
 }
 // clear command
 function clearTerminal(){
@@ -199,14 +214,15 @@ function viewProductDetails(terminalOutput, productId){
     terminalOutput.innerHTML = '';
     const productDetail = product.find(p => p.id === parseInt(productId));
     terminalOutput.innerHTML += 
-                `<p>Title : ${productDetail.title}</p>
+                `<p><strong>Product Details :</strong></p><br>
+                <p>Name : ${productDetail.title}</p>
                 <p>Price : $${productDetail.price}</p>
                 <p>Description : ${productDetail.description}</p>
                 <p>Category : ${productDetail.category}</p>`;
 }
 // add to cart
 function addToCart(terminalOutput, productId){
-
+    const productToAdd = product.find(p => p.id === parseInt(productId));
     if(productId > 20){
         terminalOutput.textContent += "Please provide a valid ID\n"
     }
@@ -216,11 +232,12 @@ function addToCart(terminalOutput, productId){
     else{
         cart.push(productId);
         terminalOutput.innerHTML += 
-        `Product ${productId} successfully added to cart . Type 'cart' to view cart details`;
+        `${productToAdd.title}..... successfully added to cart.<br> Type 'cart' to view cart details`;
     }
 }
 // remove from cart
 function removeFromCart(terminalOutput, productId){
+    const productToRemove = product.find(p => p.id === parseInt(productId));
     const indexOfProduct = cart.indexOf(productId);
 
     if (productId > 20){
@@ -228,7 +245,7 @@ function removeFromCart(terminalOutput, productId){
     }
     else{
         cart.splice(indexOfProduct, 1);
-        terminalOutput.textContent += `Product ${productId} removed successfully`;
+        terminalOutput.textContent += `${productToRemove}.... successfully removed from the cart`;
     }
 }
 // view current cart status
@@ -251,7 +268,43 @@ function viewCartContent(terminalOutput) {
         Type buy to proceed to checkout`
     }
 }
-// sort on basis of price 
-function sortProducts(terminalOutput, minAmount, maxAmount, name){
+// sort on basis of name and price 
+function sortAndDisplayProducts(sortBy) {
+    const showroom = document.querySelector('.showroom');
+    showroom.innerHTML = '';
 
+    let sortedProducts = [...product]; // Create a copy of the product array
+
+    if (sortBy === 'name') {
+        sortedProducts.sort((a, b) => a.title.localeCompare(b.title));
+    } else if (sortBy === 'price') {
+        sortedProducts.sort((a, b) => a.price - b.price);
+    }
+
+    sortedProducts.forEach(product => {
+        const productCard = document.createElement('div');
+        productCard.className = 'product-card';
+
+        const newProduct = document.createElement('img');
+        newProduct.src = product.image;
+
+        const productPrice = document.createElement('p');
+        productPrice.className = 'product-price';
+        productPrice.textContent = `$${product.price}`;
+
+        const productGist = document.createElement('div');
+        productGist.className = 'product-gist';
+        
+        const addToCartButton = document.createElement('button');
+        addToCartButton.className = 'cart-button';
+
+        productCard.appendChild(newProduct);
+        productGist.appendChild(productPrice);
+        productGist.appendChild(addToCartButton);
+        productCard.appendChild(productGist)
+        showroom.appendChild(productCard);
+    });
+}
+function proceedToBuy(){
+    window.location.href='http://127.0.0.1:5500/task-05/buy.html';
 }
