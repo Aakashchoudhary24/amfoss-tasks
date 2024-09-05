@@ -182,3 +182,77 @@ input[type="text"] {
     white-space: pre-wrap;
     word-wrap: break-word;
 }
+.checkout-page {
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    padding: 30px;
+}
+.order-list {
+    display: flex;
+    flex-direction: column;
+    height: 90vh;
+    width: 36vw;
+    background-color: black;
+    align-items: center;
+    overflow-y: auto;
+    scrollbar-width: none;
+    border-radius: 20px;
+}
+.item-cards {
+    height: 35vh;
+    width: 30vw;
+    background-color: white;
+    display: flex;
+    flex-direction: row;
+    margin-top: 30px;
+    padding: 10px;
+    border-radius: 10px;
+}
+.visual-info {
+    height: 30vh;
+    width: 12vw;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.item-image {
+    height: 26vh;
+    width: 12vw;
+}
+.item-price {
+    margin-top: 1vh;
+    background-color: white;
+    height: 5vh;
+    width: 6vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: yellow;
+    font-family: 'Playwrite CU', sans-serif;
+}
+.item-description {
+    display: flex;
+    background-color: white;
+    justify-content: center;
+    align-items: center;
+    color: blue;
+    font-size: 25px;
+    width: 100%;
+    padding: 50px;
+}
+.cart-total {
+    height: 10vh;
+    width: 36vw;
+    background-color: peachpuff;
+    margin-top: 2vw;
+    font-family: 'Playwrite CU', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1vw;
+}

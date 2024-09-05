@@ -4,7 +4,7 @@ const terminal = document.querySelector('.terminal');
 const terminalWindow = document.getElementById('terminal-window');
 const cart = [];
 const totalCartValue = document.createElement('div');
-// rendering product data
+
 let product = null;
 fetch('https://fakestoreapi.com/products/')
 .then(response => response.json())
@@ -13,7 +13,7 @@ fetch('https://fakestoreapi.com/products/')
     console.log(product);
     renderImages();
 })
-// rendering the product images in showroom
+
 function renderImages(){
     product.forEach(product => {
         const showroom = document.querySelector('.showroom');
@@ -42,7 +42,7 @@ function renderImages(){
         showroom.appendChild(productCard);
     })
 }
-// enter key press functionality
+
 terminalInput.addEventListener('keydown', function(event) {
     if (event.key === 'Enter') {
         const command = terminalInput.value.trim();
@@ -50,7 +50,7 @@ terminalInput.addEventListener('keydown', function(event) {
         insertTerminalWindow();
     }
 });
-// function for inserting new terminal after every enter key press
+
 function insertTerminalWindow() {
     const newInputLine = document.createElement('div');
     newInputLine.className = 'terminal-input';
@@ -82,7 +82,7 @@ function insertTerminalWindow() {
         }
     });
 }
-// handling the input commands
+
 function handleInput(command, terminalOutput) {
     const [cmd, arg] = command.split(' ');
 
@@ -132,7 +132,7 @@ function handleInput(command, terminalOutput) {
 
         case 'search':
             if (arg) {
-                searchCommand(terminalOutput, arg);
+                searchName(terminalOutput, arg);
             }
             else {
                 terminalOutput.textContent += "Please provide a product ID.\n"
@@ -158,12 +158,12 @@ function handleInput(command, terminalOutput) {
     }
     terminalInput.value = '';
 }
-// help command
+
 function helpCommand(terminalOutput){
     terminalOutput.innerHTML = 
     `<strong>Available Commands :</strong><br>1) list <br>2) clear<br>3) details "product_id"<br>4) cart<br>5) buy<br>6) sort "price/name"<br>7) add "product_id"<br>8) remove "product_id"<br>9) search "product_id"`
 }
-// clear command
+
 function clearTerminal(){
     terminal.innerHTML = '';
 
@@ -203,13 +203,13 @@ function clearTerminal(){
 
     terminalWindow.innerHTML = '';
 }
-// list command 
+
 function listProducts(terminalOutput) {
     product.forEach(p => {
         terminalOutput.innerHTML += `${p.id} : ${p.title}<br>`;
     });
 }
-// view product details command
+
 function viewProductDetails(terminalOutput, productId){
     terminalOutput.innerHTML = '';
     const productDetail = product.find(p => p.id === parseInt(productId));
@@ -220,7 +220,7 @@ function viewProductDetails(terminalOutput, productId){
                 <p>Description : ${productDetail.description}</p>
                 <p>Category : ${productDetail.category}</p>`;
 }
-// add to cart
+
 function addToCart(terminalOutput, productId){
     const productToAdd = product.find(p => p.id === parseInt(productId));
     if(productId > 20){
@@ -235,22 +235,24 @@ function addToCart(terminalOutput, productId){
         `${productToAdd.title}..... successfully added to cart.<br> Type 'cart' to view cart details`;
     }
 }
-// remove from cart
+
 function removeFromCart(terminalOutput, productId){
     const productToRemove = product.find(p => p.id === parseInt(productId));
     const indexOfProduct = cart.indexOf(productId);
 
-    if (productId > 20){
+    if (!productToRemove){
         terminalOutput.textContent += "No product with provided ID\n"
+    }
+    else if (indexOfProduct === -1){
+        terminalOutput.textContent += "Product not in cart ... yet :("
     }
     else{
         cart.splice(indexOfProduct, 1);
-        terminalOutput.textContent += `${productToRemove}.... successfully removed from the cart`;
+        terminalOutput.textContent += `${productToRemove.title}.... successfully removed from the cart`;   
     }
 }
-// view current cart status
-function viewCartContent(terminalOutput) {
 
+function viewCartContent(terminalOutput) {
     var netPrice = 0;
     if(cart.length == 0){
         terminalOutput.textContent = "No items in the cart yet :("
@@ -265,22 +267,19 @@ function viewCartContent(terminalOutput) {
             ---------------------------------------<br>\n`
         }
         terminalOutput.innerHTML += `Total payable amount : $ ${netPrice}<br>
-        Type buy to proceed to checkout`
+        Type 'buy' to proceed to checkout`
     }
 }
-// sort on basis of name and price 
+
 function sortAndDisplayProducts(sortBy) {
     const showroom = document.querySelector('.showroom');
     showroom.innerHTML = '';
-
-    let sortedProducts = [...product]; // Create a copy of the product array
-
+    let sortedProducts = [...product];
     if (sortBy === 'name') {
         sortedProducts.sort((a, b) => a.title.localeCompare(b.title));
     } else if (sortBy === 'price') {
         sortedProducts.sort((a, b) => a.price - b.price);
     }
-
     sortedProducts.forEach(product => {
         const productCard = document.createElement('div');
         productCard.className = 'product-card';
@@ -305,6 +304,20 @@ function sortAndDisplayProducts(sortBy) {
         showroom.appendChild(productCard);
     });
 }
-function proceedToBuy(){
-    window.location.href='http://127.0.0.1:5500/task-05/buy.html';
+function proceedToBuy() {
+    localStorage.setItem('cart', JSON.stringify(cart));
+    localStorage.setItem('products', JSON.stringify(product));
+    window.location.href = 'buy.html';
+}
+
+function searchName(terminalOutput, arg){
+    let searchByFirstName = str => product.filter(({title}) => title.toLowerCase().includes(str.toLowerCase()));
+    const filteredProducts = searchByFirstName(arg); 
+    if (filteredProducts.length > 0) {
+        filteredProducts.forEach(p => {
+            terminalOutput.innerHTML += `${p.id} : ${p.title}<br>`;
+        });
+    } else {
+        terminalOutput.textContent = "No product with such name found";
+    }
 }
