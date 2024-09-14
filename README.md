@@ -41,7 +41,7 @@
     <tr>
       <td><a href="https://github.com/Aakashchoudhary24/amfoss-tasks/tree/main/task-03">Task-03</tda>
       <td>Hello, World!</td>
-      <td>Partially Completed</td>
+      <td>6/10 Languages</td>
     </tr>
     <tr>
       <td><a href="https://github.com/Aakashchoudhary24/amfoss-tasks/tree/main/task-04">Task-04</tda>
