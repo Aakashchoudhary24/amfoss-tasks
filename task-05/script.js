@@ -31,6 +31,20 @@ function renderImages(){
         addToCartButton.className = 'cart-button';
         addToCartButton.textContent = ' + '
 
+        addToCartButton.addEventListener('click', () => {
+            const productId = product.id;
+            const productToAdd = product; 
+
+            if (cart.includes(productId)) {
+                alert("Item already in the cart");
+            } else {
+                cart.push(productId);
+                alert(`${productToAdd.title} has been successfully added to the cart.`);
+            }
+
+            console.log('Cart:', cart);
+        });
+
         const productPrice = document.createElement('p');
         productPrice.className = 'product-price';
         productPrice.textContent = `$${product.price}`;
@@ -57,7 +71,7 @@ function insertTerminalWindow() {
 
     const newCounter = document.createElement('span');
     newCounter.id = 'counter';
-    newCounter.innerHTML = '<strong>butter@counter:$</strong>';
+    newCounter.innerHTML = '<strong>your@counter:$</strong>';
 
     const newInput = document.createElement('input');
     newInput.type = 'text';
@@ -175,7 +189,7 @@ function clearTerminal(){
         
     const newCounter = document.createElement('span');
     newCounter.id = 'counter';
-    newCounter.innerHTML = '<strong>butter@counter:$</strong>';
+    newCounter.innerHTML = '<strong>your@counter:$</strong>';
         
     const newInput = document.createElement('input');
     newInput.type = 'text';

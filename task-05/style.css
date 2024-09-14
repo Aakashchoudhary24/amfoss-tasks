@@ -23,26 +23,10 @@ nav {
 label.logo {
     font-size: 40px;
     color: yellow;
-    line-height: 100px;
+    line-height: 110px;
     padding: 0 50px;
     font-weight: bold;
     font-family: 'Playwrite CU', sans-serif;
-}
-nav ul {
-    float: right;
-    margin-right: 40px;
-}
-nav ul li {
-    display: inline-block;
-    line-height: 100px;
-    margin: 0 20px;
-}
-nav ul li a {
-    color: yellow;
-    font-size: 24px;
-    font-weight: 600;
-    text-transform: uppercase;
-    font-family: 'Inter';
 }
 .mall {
     display: flex;
@@ -80,7 +64,6 @@ nav ul li a {
     height: 440px;
     width: 273px;
     overflow: hidden;
-    margin: 10px;
     padding: 5px;
     display: flex;
     flex-direction: column;
@@ -124,7 +107,7 @@ nav ul li a {
     font-family: 'Playwrite CU', sans-serif;
 }
 .terminal {
-    margin-top: 160px;
+    margin-top: 70px;
     width: 37vw;
     height: 82vh;
     background-color: #181818;
@@ -132,7 +115,7 @@ nav ul li a {
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 20px 30px 30px 30px;
+    padding: 10px;
     position: fixed;
     left: 61vw;
     overflow-y: scroll;
@@ -147,15 +130,14 @@ nav ul li a {
 }
 .terminal-input {
     border-radius: 10px;
-    height: 5vh;
+    height: 3vh;
     width: 100%;
-    padding: 12px;
+    padding: 10px;
     background-color: #181818;
-    margin-top: 8px;
+    margin-top: 6px;
 }
 #counter {
-    margin-right: 5px;
-    font-size: 25px;
+    font-size: 22px;
     color: yellow;
 }
 input[type="text"] {
@@ -164,8 +146,8 @@ input[type="text"] {
     color: white;
     outline: none;
     flex-grow: 1;
-    text-indent: 10px;
-    width: 70%;
+    text-indent: 5px;
+    width: fit-content;
 }
 .terminal-output {
     border-radius: 10px;

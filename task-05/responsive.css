@@ -1,4 +1,4 @@
-@media screen and (max-width: 890px) {
+@media screen and (max-width: 1500px) {
     .container {
         flex-direction: column;
         margin: 0;
@@ -6,63 +6,87 @@
         justify-content: center;
         align-content: center;
     }
-    .navbar {
-        width: 98vw;
-        height: 10vh;
-        position: relative;
-        top: 0px;
+    .selection-area{
+        width: 50vw;
     }
-    .showroom{
-        width: 98vw;
-        height: 60vh;
-        position: relative;
-        
-        top: 5px;
+    .terminal{
+        position: fixed;
+        top: 140px;
+        left: 50vw;
+        width: 48vw;
     }
-    .terminal {
-        width: 98vw;
-        height: 28vh;
-        position: relative;
-        top: 10px;
-    }
-    .terminal-window{
-        height: 90%;
-    }
-    .prompt {
-        font-size: 20px;
+    label.logo{
+        line-height: 140px;
     }
 }
-@media screen and (max-width: 430px) {
+@media screen and (max-width: 1300px) {
     .container {
         flex-direction: column;
         margin: 0;
-        padding: 0; 
+        padding: 0;
+        justify-content: center;
+        align-content: center;
     }
-    .navbar {
-        width: 96vw;
-        height: 10vh;
-        position: relative;
-        margin-top: 0px;
+    .selection-area{
+        right: 65vw;
+        width: 30vw;
     }
-    .showroom{
-        width: 96vw;
-        height: 56vh;
-        position: relative;
-        margin-top: 1px;
+    .showroom {
+        width: 25vw;
     }
-    .terminal {
-        width: 96vw;
-        height: 34vh;
-        position: relative;
-        margin-top: 1px;
-    }
-    .terminal-window{
-        height: 90%;
+    .terminal{
+        position: fixed;
+        top: 140px;
+        left: 38vw;
+        width: 60vw;
     }
 }
-/*Responsive navbar*/
-/*
-LIMITS:
-device from 890 to max
-device from smallest to 430
-*/
+@media screen and (max-width: 1100px) {
+    nav {
+        width: 100vw;
+    }
+    .container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .mall {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .selection-area{
+        width: 95vw;
+        position: relative;
+        margin: 0;
+        left: 5px;
+    }
+    .showroom{
+        width: fit-content;
+        height: 49vh;
+        margin-top: 10px;
+    }
+    .terminal{
+        margin-top: 20px;
+        height: 35vh;
+        width: 80vw;
+        left: auto;
+        top: 63vh;
+    }
+    .terminal-input {
+        height: 6vh;
+    }
+}
+@media screen and (max-width: 510px) {
+    .product-card{
+        height: 500px;
+        width: 350px;
+        padding: 0;
+        margin: 0;
+    }
+    .terminal-input {
+        height: 6vh;
+    }
+}

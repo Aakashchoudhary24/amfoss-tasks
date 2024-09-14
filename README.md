@@ -51,27 +51,27 @@
     <tr>
       <td><a href="https://github.com/Aakashchoudhary24/amfoss-tasks/tree/main/task-05">Task-05</tda>
       <td><a href="https://github.com/swayam-agrahari/TerminalTrolly">TerminalTrolly</td>
-      <td>Partially Completed</td>
+      <td>Completed</td>
     </tr>
     <tr>
       <td><a href="https://github.com/Aakashchoudhary24/amfoss-tasks/tree/main/task-06">Task-06</tda>
       <td>OpenDocs</td>
-      <td></td>
+      <td>Completed</td>
     </tr>
     <tr>
       <td><a href="https://github.com/Aakashchoudhary24/amfoss-tasks/tree/main/task-07">Task-07</tda>
       <td><a href="https://github.com/hrideshmg/Pirates-Dilemma">Pirate's Dilemma</td>
-      <td></td>
+      <td>Attempted</td>
     </tr>
     <tr>
       <td><a href="https://github.com/Aakashchoudhary24/amfoss-tasks/tree/main/task-08">Task-08</tda>
       <td>Blog Burst</td>
-      <td></td>
+      <td>Completed</td>
     </tr>
     <tr>
       <td><a href="https://github.com/Aakashchoudhary24/amfoss-tasks/tree/main/task-09">Task-09</tda>
       <td><a href="https://github.com/chimnayajith/hero-dex-phase2//">HERO-DEX!</td>
-      <td>Unattempted</td>
+      <td>Attempted</td>
     </tr>
     <tr>
       <td><a href="https://github.com/Aakashchoudhary24/amfoss-tasks/tree/main/task-10">Task-10</tda>
