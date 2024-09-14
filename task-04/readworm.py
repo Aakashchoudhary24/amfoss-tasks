@@ -185,5 +185,5 @@ def callback_query(call):
         else:
             bot.answer_callback_query(call.id, "Your reading list is already empty.")
 
-# Start the bot
+# starting the bot(bot polling function- making this thing run)
 bot.polling()
